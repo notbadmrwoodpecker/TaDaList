@@ -7,14 +7,14 @@
         @csrf
         <div>
             <label for="title">What's your next To-Do?</label>
-            <input type="text" name="title" id="title" />
+            <input type="text" name="title" id="title" value="{{ old('title') }}" />
             @error('title')
                 <p>{{ $message }}</p>
             @enderror
         </div>
         <div>
             <label for="description">Note</label>
-            <textarea name="description" id="description" rows="5"></textarea>
+            <textarea name="description" id="description" rows="5">{{ old('description') }}</textarea>
         </div>
             @error('description')
                 <p>{{ $message }}</p>
