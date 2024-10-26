@@ -3,11 +3,11 @@
 @section('title', $task->title)
 
 @section('content')
-<p>{{ $task->description }}</p>
+    <p class="mb-4">{{ $task->description }}</p>
 
-@if($task->long_description)
-    <p>{{ $task->long_description }}</p>
-@else
-    <p>No more details.. 🕵🏽‍♂️</p>
-@endif
+    @if($task->long_description)
+        <p>{{ $task->long_description }}</p>
+    @else
+        <p>🕵🏽‍♂️ No more details..</p>
+    @endif
 @endsection
