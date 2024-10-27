@@ -3,7 +3,7 @@
 @section('title', isset($task) ? 'Edit & Fine-Tune your To-Do 🛠️' : 'Ready for your next Ta-Da 🥳')
 
 @section('content')
-    <form method="POST" action="{{ isset($task) ? route('tasks.edit', ['task' => $task->id]) : route('tasks.store') }}">
+    <form method="POST" action="{{ isset($task) ? route('tasks.update', ['task' => $task->id]) : route('tasks.store') }}">
         @csrf
         @isset($task)
             @method('PUT')

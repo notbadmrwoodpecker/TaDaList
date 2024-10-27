@@ -42,7 +42,7 @@ Route::put('/tasks/{task}', function (Task $task, TaskRequest $request) {
 
     return redirect()->route('tasks.show', ['task' => $task->id])
         ->with('success', 'To-Do updated - now tackle it! 💪');
-})->name('tasks.edit');
+})->name('tasks.update');
 
 Route::delete('/tasks/{task}', function(Task $task) {
     $task->delete();

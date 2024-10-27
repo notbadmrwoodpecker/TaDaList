@@ -14,9 +14,13 @@
         <p>🕵🏽‍♂️ No more details..</p>
     @endif
 
+    <div>
+        <a href="{{ route('tasks.edit', ['task' => $task->id]) }}">Edit this To-Do</a>
+    </div>
+
     <form action="{{ route('tasks.destroy', ['task' => $task->id]) }}" method="POST">
         @csrf
         @method('DELETE')
-        <button type="submit">Delete To-Do</button>
+        <button type="submit">Delete this To-Do</button>
     </form>
 @endsection
