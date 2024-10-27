@@ -10,15 +10,17 @@
     <body>
         <div class="w-96 mx-auto">
             <header class="mb-6">
-                <nav class="py-4 flex items-center border-b border-gray-700">
-                    <div>
-                        <p class="text-3xl mr-3">🎉</p>
-                    </div>
-                    <div>
-                        <h1 class="font-bold text-xl">ta da list</h1>
-                        <p class="text-sm">Turn To-Dos into Ta-Das</p>
-                    </div>
-                </nav>
+                <a href="/">
+                    <nav class="py-4 flex items-center border-b border-gray-700">
+                        <div>
+                            <p class="text-3xl mr-3">🎉</p>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-xl">ta da list</h1>
+                            <p class="text-sm">Turn To-Dos into Ta-Das</p>
+                        </div>
+                    </nav>
+                </a>
             </header>
             <div>
                 <h1 class="mb-4 text-2xl font-extrabold">@yield('title')</h1>
