@@ -14,5 +14,9 @@
     @empty
         <p>Everything done for today. 🎉</p>
     @endforelse
+
+    @if ($tasks->count())
+        {{ $tasks->links() }}
+    @endif
 </div>
 @endsection
