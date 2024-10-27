@@ -51,6 +51,12 @@ Route::delete('/tasks/{task}', function(Task $task) {
         ->with('success', 'To-Do removed - now tackle the other ones! 💪');
 })->name('tasks.destroy');
 
+Route::put('/tasks/{task}/toggle-completed', function (Task $task) {
+    $task->toggleCompleted();
+
+    return redirect()->back();
+})->name('tasks.toggle-complete');
+
 Route::fallback(function() {
     return 'Your personal 404 :o';
 });
