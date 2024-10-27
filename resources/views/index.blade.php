@@ -5,7 +5,7 @@
 @section('content')
 <div class="">
     @forelse ($tasks as $task)
-            <a class="px-4 py-3 block border-b border-gray-200 flex items-center justify-between first:border-t even:bg-gray-100 hover:bg-lime-50" href="{{ route('tasks.show', ['id' => $task->id]) }}">
+            <a class="px-4 py-3 block border-b border-gray-200 flex items-center justify-between first:border-t even:bg-gray-100 hover:bg-lime-50" href="{{ route('tasks.show', ['task' => $task->id]) }}">
                 <p class="mr-3">{{ $task->title }}</p>
                 <p class="text-xl font-bold text-gray-700">
                     ›

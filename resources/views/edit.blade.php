@@ -3,7 +3,7 @@
 @section('title', 'Edit & Fine-Tune your To-Do')
 
 @section('content')
-    <form method="POST" action="{{ route('tasks.edit', ['id' => $task->id]) }}">
+    <form method="POST" action="{{ route('tasks.edit', ['task' => $task->id]) }}">
         @csrf
         @method('PUT')
         <div>
